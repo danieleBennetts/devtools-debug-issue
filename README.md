@@ -1,7 +1,4 @@
-# C# Dev Kit — Go to Definition Repro
-
-Minimal reproduction for [dotnet/vscode-csharp#8530](https://github.com/dotnet/vscode-csharp/issues/8530):
-**"Go to Definition" navigates to decompiled metadata instead of source file for project references.**
+# C# Dev tools — Debug test issus
 
 ## Structure
 
@@ -29,12 +26,8 @@ src/
 
 ## Steps to reproduce
 
-1. Open `src/SampleApp.sln` in VS Code with C# Dev Kit
-2. Open any test file (e.g., `OrderTests.cs`)
-3. Place cursor on `CreateOrderRequest` or `CreateOrderResponse`
-4. Press F12 (Go to Definition)
-5. **Expected:** navigates to `SampleApp/Models/CreateOrderRequest.cs`
-6. **Actual:** opens decompiled metadata file from `%LOCALAPPDATA%\Temp\MetadataAsSource\...`
+1. Open `src/SampleApp.sln` in VS Code with C# Dev Tools
+2. Open the test runner or codelens in a file, click debug.
 
 ## Running tests
 
